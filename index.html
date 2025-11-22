@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Qasim-Portfoilio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Permanent+Marker&family=Quicksand:wght@500;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-text">Loading Creativity...</div>
+    </div>
+
+    <!-- CANVAS LAYERS -->
+    <canvas id="cursorCanvas"></canvas>
+    <canvas id="drawCanvas"></canvas>
+    <button id="clearBtn" title="Clear Drawing"><i class="fas fa-eraser"></i></button>
+
+    <!-- MAIN CONTENT (Z-Index Fixed) -->
+    <div id="main-content">
+        
+        <nav>
+            <div class="logo">Muhammad<span>Qasim.</span></div>
+            <div class="status-badge">
+                <span class="dot"></span> <span id="statusText">Checking...</span>
+            </div>
+            <div class="nav-actions">
+                <button id="resumeBtn" class="resume-btn">Receipt <i class="fas fa-receipt"></i></button>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hi">Hola! It's me <span class="wave">👋</span></p>
+                <h1 id="name-highlight">Muhammad Qasim</h1>
+                <h2 class="tagline">Visual Designer & Strategist</h2>
+                <p class="bio">Turning <span id="highlight-word">0 to 43k Followers</span> with design & strategy.</p>
+                
+                <div class="stats-row">
+                    <div class="stat-item"><span class="counter" data-target="43000">0</span>+ <p>Followers</p></div>
+                    <div class="stat-item"><span class="counter" data-target="50">0</span>+ <p>Designs</p></div>
+                    <div class="stat-item"><span class="counter" data-target="30">0</span>+ <p>Videos</p></div>
+                </div>
+
+                <div class="cta-group">
+                    <a href="#contact" class="btn-primary">Hire Me</a>
+                </div>
+            </div>
+            
+            <div class="hero-stickers">
+                <div class="sticker draggable s1"><i class="fab fa-instagram"></i> 43k+</div>
+                <div class="sticker draggable s2"><i class="fas fa-video"></i> Editor</div>
+                <div class="sticker draggable s3"><i class="fas fa-magic"></i> Creative</div>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <h2 class="section-title">My <span id="work-underline">Superpowers</span></h2>
+            <div class="gallery">
+                <div class="tilt-card">
+                    <div class="card-icon c1"><i class="fab fa-instagram"></i></div>
+                    <h3>Growth Strategy</h3>
+                    <p>Organic growth from 0 to 43k.</p>
+                </div>
+                <div class="tilt-card">
+                    <div class="card-icon c2"><i class="fas fa-video"></i></div>
+                    <h3>Video Editing</h3>
+                    <p>High retention Reels & TikToks.</p>
+                </div>
+                <div class="tilt-card">
+                    <div class="card-icon c3"><i class="fas fa-palette"></i></div>
+                    <h3>Visual Design</h3>
+                    <p>Brand Identity & Aesthetics.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="section">
+            <h2 class="section-title">The <span class="highlight-text">Viral Formula</span></h2>
+            <p class="section-subtitle">How I make content that grows.</p>
+            <div class="process-container">
+                <div class="process-step">
+                    <div class="step-icon">🧠</div>
+                    <h3>Strategy</h3>
+                    <p>Finding gaps & trending topics.</p>
+                    <div class="step-number">01</div>
+                </div>
+                <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="process-step">
+                    <div class="step-icon">🎨</div>
+                    <h3>Creation</h3>
+                    <p>High-quality Design & Editing.</p>
+                    <div class="step-number">02</div>
+                </div>
+                <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="process-step">
+                    <div class="step-icon">🚀</div>
+                    <h3>Growth</h3>
+                    <p>Posting & Engagement Hacks.</p>
+                    <div class="step-number">03</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="section">
+            <h2 class="section-title">Client <span class="highlight-text">Vibes</span></h2>
+            <div class="chat-container">
+                <div class="chat-bubble left"><p>Bro! 43k followers? Strategy was insane! 🔥</p></div>
+                <div class="chat-bubble right"><p>Glad you liked it! Ready for next campaign? 😎</p></div>
+                <div class="chat-bubble left"><p>Absolutely. The video edits were spot on.</p></div>
+            </div>
+        </section>
+
+        <section id="contact" class="section footer-section">
+            <h2>Ready to <span id="contact-circle">Start?</span></h2>
+            <div class="contact-links">
+                <a href="mailto:muhammadqasimofficial@proton.me" class="wiggle-btn">Email Me</a>
+                <a href="https://wa.me/923074786500" class="wiggle-btn">WhatsApp</a>
+            </div>
+            
+            <!-- FUN ZONE -->
+            <div class="fun-zone">
+                <button id="dontClickBtn" class="danger-btn">Do Not Click Me 🚫</button>
+            </div>
+
+            <footer><p>Made with ❤️ in Pakistan</p></footer>
+        </section>
+    </div>
+
+    <!-- RECEIPT MODAL -->
+    <div id="resume-modal" class="modal-overlay">
+        <div class="modal-content receipt-paper">
+            <button class="close-modal"><i class="fas fa-times"></i></button>
+            <div class="receipt-header">
+                <i class="fas fa-star-of-life fa-spin"></i>
+                <h2>QASIM'S SHOP</h2>
+                <p>Gujrat, Pakistan</p>
+                <p>+92 307 4786500</p>
+                <hr class="dashed-line">
+            </div>
+            <div class="receipt-body">
+                <div class="r-row header"><span>ITEM</span><span>LEVEL</span></div>
+                <div class="r-row"><span>Graphics</span><span>100%</span></div>
+                <div class="r-row"><span>Video Edit</span><span>95%</span></div>
+                <div class="r-row"><span>Social Growth</span><span>PRO</span></div>
+                <hr class="dashed-line">
+                <div class="r-row header"><span>EXP</span><span>YEAR</span></div>
+                <div class="r-row"><span>IG (0-43k)</span><span>2024</span></div>
+                <div class="r-row"><span>ADP Finance</span><span>2026</span></div>
+                <hr class="solid-line">
+                <div class="r-row total"><span>TOTAL</span><span>HIRE ME</span></div>
+            </div>
+            <div class="receipt-footer">
+                <div class="barcode">||| || ||| ||||</div>
+                <button onclick="window.print()" class="print-receipt-btn">PRINT RECEIPT</button>
+            </div>
+            <div class="jagged-edge"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
